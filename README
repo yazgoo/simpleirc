@@ -1,4 +1,7 @@
 * Usage: hostname port
 * «telnet localhost 2000» for the display part
-* commands.wikipedia extracted from:
+* when launched for the first time, wikipedia article:
     https://en.wikipedia.org/wiki/List_of_Internet_Relay_Chat_commands
+  is downloaded. If that does not work because the article has changed
+  or the page is not reachable, copy commands.wikipedia.backup
+  to commands.wikipedia

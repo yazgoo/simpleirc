@@ -1,0 +1,837 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.5/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.5/ http://www.mediawiki.org/xml/export-0.5.xsd" version="0.5" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.18wmf1</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Wikipedia</namespace>
+      <namespace key="5" case="first-letter">Wikipedia talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="100" case="first-letter">Portal</namespace>
+      <namespace key="101" case="first-letter">Portal talk</namespace>
+      <namespace key="108" case="first-letter">Book</namespace>
+      <namespace key="109" case="first-letter">Book talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>List of Internet Relay Chat commands</title>
+    <id>2224155</id>
+    <revision>
+      <id>475596304</id>
+      <timestamp>2012-02-07T16:30:03Z</timestamp>
+      <contributor>
+        <ip>203.219.241.207</ip>
+      </contributor>
+      <comment>Added links to the RFCs</comment>
+      <text xml:space="preserve" bytes="23133">&lt;!-- prod removed. See Talk --&gt; 
+&lt;!-- ATTENTION EDITORS:
+Do NOT include service-specific commands on this list. THEY WILL BE REMOVED.
+--&gt;
+This is a list of all '''[[Internet Relay Chat]] commands''' from [[IETF]] [[Request for Comments|RFC]]s [http://tools.ietf.org/html/rfc1459 1459] and [http://tools.ietf.org/html/rfc2812 2812]. Most IRC clients require commands to be preceded by a slash (&quot;/&quot;). Angle brackets (&quot;&lt;&quot; and &quot;&gt;&quot;) denote what's placed in the encapsulated field, not a literal part of the command. Arguments encapsulated in square brackets (&quot;[&quot; and &quot;]&quot;) are optional and override the command's defaults.
+
+==User commands==
+===ADMIN===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;ADMIN [&lt;server&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Instructs the server to return information about the administrator of the server specified by &lt;server&gt;, or the current server if target is omitted.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Admin command
+| section     = 4.3.7
+| page        = 31
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===AWAY===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;AWAY [&lt;message&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Provides the server with a message to automatically send in reply to a PRIVMSG directed at the user, but not to a channel they are on.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Away
+| section     = 5.1
+| pages       = 38{{ndash}} 39
+| idanchor    = ietf
+}}&lt;/ref&gt;
+If &lt;message&gt; is omitted, the away status is removed.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===CONNECT===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;CONNECT &lt;target server&gt; [&lt;port&gt; [&lt;remote server&gt;]]&lt;/nowiki&gt;&lt;/code&gt; (&lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;)
+:&lt;code&gt;&lt;nowiki&gt;CONNECT &lt;target server&gt; &lt;port&gt; [&lt;remote server&gt;]&lt;/nowiki&gt;&lt;/code&gt; (&lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;)
+
+Instructs the server &lt;remote server&gt; (or the current server, if &lt;remote server&gt; is omitted) to connect to &lt;target server&gt; on port &lt;port&gt;.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Connect message
+| section     = 4.3.5
+| pages       = 29{{ndash}} 30
+| idanchor    = ietf
+}}&lt;/ref&gt;&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = Connect message
+| section     = 3.4.7
+| pages       = 28{{ndash}} 29
+| idanchor    = ietf
+}}&lt;/ref&gt;
+This command should only be available to [[IRC Operator]]s.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;; the &lt;port&gt; parameter became mandatory in &lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;
+
+===DIE===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;DIE&lt;/nowiki&gt;&lt;/code&gt;
+
+Instructs the server to shut down.&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = Die message
+| section     = 4.3
+| page        = 39
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;
+
+===ERROR===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;ERROR &lt;error message&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+This command is for use by servers to report errors to other servers. It is also used before terminating client connections.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Error
+| section     = 4.6.4
+| page        = 38
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+=== INFO ===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;INFO [&lt;target&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Returns information about the &lt;target&gt; server, or the current server if &lt;target&gt; is omitted.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Info command
+| section     = 4.3.8
+| pages       = 31{{ndash}} 32
+| idanchor    = ietf
+}}&lt;/ref&gt; Information returned includes the server's version, when it was compiled, the [[Patch (computing)|patch level]], when it was started, and any other information which may be considered to be relevant.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===INVITE===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;INVITE &lt;nickname&gt; &lt;channel&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+Invites &lt;nickname&gt; to the channel &lt;channel&gt;.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Invite message
+| section     = 4.2.7
+| page        = 25
+| idanchor    = ietf
+}}&lt;/ref&gt; &lt;channel&gt; does not have to exist, but if it does, only members of the channel are allowed to invite other clients. If the channel mode i is set, only channel operators may invite other clients.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===ISON===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;ISON &lt;nicknames&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+Queries the server to see if the clients in the space-separated list &lt;nicknames&gt; are currently on the network.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Ison message
+| section     = 5.8
+| page        = 42
+| idanchor    = ietf
+}}&lt;/ref&gt; The server returns only the nicknames that are on the network in a space-separated list. If none of the clients are on the network the server returns an empty list.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===JOIN===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;JOIN &lt;channels&gt; [&lt;keys&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Makes the client join the channels in the comma-separated list &lt;channels&gt;, specifying the passwords, if needed, in the comma-separated list &lt;keys&gt;.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Join message
+| section     = 4.2.1
+| pages       = 19{{ndash}} 20
+| idanchor    = ietf
+}}&lt;/ref&gt; If the channel(s) do not exist then they will be created.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===KICK===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;KICK &lt;channel&gt; &lt;client&gt; [&lt;message&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Forcibly removes &lt;client&gt; from &lt;channel&gt;.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Kick command
+| section     = 4.2.8
+| pages       = 25{{ndash}} 26
+| idanchor    = ietf
+}}&lt;/ref&gt; This command may only be issued by channel operators.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===KILL===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;KILL &lt;client&gt; &lt;comment&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+Forcibly removes &lt;client&gt; from the network.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Kill message
+| section     = 4.6.1
+| page        = 36
+| idanchor    = ietf
+}}&lt;/ref&gt; This command may only be issued by IRC operators.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===LINKS===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;LINKS [&lt;remote server&gt; [&lt;server mask&gt;]]&lt;/nowiki&gt;&lt;/code&gt;
+
+Lists all server links matching &lt;server mask&gt;, if given, on &lt;remote server&gt;, or the current server if omitted.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Links message
+| section     = 4.3.3
+| pages       = 28{{ndash}} 29
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===LIST===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;LIST [&lt;channels&gt; [&lt;server&gt;]]&lt;/nowiki&gt;&lt;/code&gt;
+
+Lists all channels on the server.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = List message
+| section     = 4.2.6
+| pages       = 24{{ndash}} 25
+| idanchor    = ietf
+}}&lt;/ref&gt; If the comma-separated list &lt;channels&gt; is given, it will return the channel topics. If &lt;server&gt; is given, the command will be forwarded to &lt;server&gt; for evaluation.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===LUSERS===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;LUSERS [&lt;mask&gt; [&lt;server&gt;]]&lt;/nowiki&gt;&lt;/code&gt;
+
+Returns statistics about the size of the network.&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = Lusers message
+| section     = 3.4.2
+| pages       = 25{{ndash}} 26
+| idanchor    = ietf
+}}&lt;/ref&gt; If called with no arguments, the statistics will reflect the entire network. If &lt;mask&gt; is given, it will return only statistics reflecting the masked subset of the network. If &lt;target&gt; is given, the command will be forwarded to &lt;server&gt; for evaluation.
+
+Defined in &lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;
+
+===MODE===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;MODE &lt;nickname&gt; &lt;flags&gt; (user)&lt;/nowiki&gt;&lt;/code&gt;
+:&lt;code&gt;&lt;nowiki&gt;MODE &lt;channel&gt; &lt;flags&gt; [&lt;args&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+The MODE command is dual-purpose. It can be used to set both user and channel modes.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Mode message
+| section     = 4.2.3
+| pages       = 21{{ndash}} 23
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===MOTD===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;MOTD [&lt;server&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Returns the message of the day on &lt;server&gt; or the current server if it is omitted.&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = Motd message
+| section     = 3.4.1
+| page        = 25
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;
+
+===NAMES===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;NAMES [&lt;channels&gt;]&lt;/nowiki&gt;&lt;/code&gt; (&lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;)
+:&lt;code&gt;&lt;nowiki&gt;NAMES [&lt;channels&gt; [&lt;server&gt;]]&lt;/nowiki&gt;&lt;/code&gt; (&lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;)
+
+Returns a list of who is on the comma-separated list of &lt;channels&gt;, by channel name.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Names message
+| section     = 4.2.5
+| page        = 24
+| idanchor    = ietf
+}}&lt;/ref&gt; If &lt;channels&gt; is omitted, all users are shown, grouped by channel name with all users who are not on a channel being shown as part of channel &quot;*&quot;. If &lt;server&gt; is specified, the command is sent to &lt;server&gt; for evaluation.&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = Names message
+| section     = 3.2.5
+| pages       = 20{{ndash}} 21
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;; the optional &lt;server&gt; parameter was added in &lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;
+
+===NICK===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;NICK &lt;nickname&gt; [&lt;hopcount&gt;]&lt;/nowiki&gt;&lt;/code&gt; (&lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;)
+:&lt;code&gt;&lt;nowiki&gt;NICK &lt;nickname&gt;&lt;/nowiki&gt;&lt;/code&gt; (&lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;)
+
+Allows a client to change their IRC nickname. Hopcount is for use between servers to specify how far away a nickname is from its home server.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Nick message
+| section     = 4.1.2
+| pages       = 14{{ndash}} 15
+| idanchor    = ietf
+}}&lt;/ref&gt;&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = Nick message
+| section     = 3.1.2
+| pages       = 10{{ndash}} 11
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;; the optional &lt;hopcount&gt; parameter was removed in &lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;
+
+===NOTICE===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;NOTICE &lt;msgtarget&gt; &lt;message&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+This command works similarly to PRIVMSG, except automatic replies must never be sent in reply to NOTICE messages.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Notice
+| section     = 4.4.2
+| page        = 33
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===OPER===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;OPER &lt;username&gt; &lt;password&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+Authenticates a user as an IRC operator on that server/network.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Oper
+| section     = 4.1.5
+| page        = 17
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===PART===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;PART &lt;channels&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+Causes a user to leave the channels in the comma-separated list &lt;channels&gt;.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Part message
+| section     = 4.2.2
+| pages       = 20{{ndash}} 21
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===PASS===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;PASS &lt;password&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+Sets a connection password.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Password message
+| section     = 4.1.1
+| page        = 14
+| idanchor    = ietf
+}}&lt;/ref&gt; This command must be sent before the NICK/USER registration combination.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===PING===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;PING &lt;server1&gt; [&lt;server2&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Tests the presence of a connection.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Ping message
+| section     = 4.6.2
+| page        = 37
+| idanchor    = ietf
+}}&lt;/ref&gt; A PING message results in a PONG reply. If &lt;server2&gt; is specified, the message gets passed on to it.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===PONG===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;PONG &lt;server1&gt; [&lt;server2&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+This command is a reply to the PING command and works in much the same way.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Pong message
+| section     = 4.6.3
+| pages       = 37{{ndash}} 38
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===PRIVMSG===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;PRIVMSG &lt;msgtarget&gt; &lt;message&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+Sends &lt;message&gt; to &lt;msgtarget&gt;, which is usually a user or channel.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Private messages
+| section     = 4.4.1
+| pages       = 32{{ndash}} 33
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===QUIT===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;QUIT [&lt;message&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Disconnects the user from the server.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Quit
+| section     = 4.1.6
+| pages       = 17{{ndash}} 18
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===REHASH===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;REHASH&lt;/nowiki&gt;&lt;/code&gt;
+
+Causes the server to re-read and re-process its configuration file(s).&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Rehash message
+| section     = 5.2
+| page        = 39
+| idanchor    = ietf
+}}&lt;/ref&gt; This command can only be sent by IRC Operators.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===RESTART===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;RESTART&lt;/nowiki&gt;&lt;/code&gt;
+
+Restarts a server.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Restart message
+| section     = 5.3
+| pages       = 39{{ndash}} 40
+| idanchor    = ietf
+}}&lt;/ref&gt; It may only be sent by IRC Operators.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===SERVICE===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;SERVICE &lt;nickname&gt; &lt;reserved&gt; &lt;distribution&gt; &lt;type&gt; &lt;reserved&gt; &lt;info&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+Registers a new service on the network.&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = Service message
+| section     = 3.1.6
+| pages       = 13{{ndash}} 14
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;
+
+===SERVLIST===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;SERVLIST [&lt;mask&gt; [&lt;type&gt;]]&lt;/nowiki&gt;&lt;/code&gt;
+
+Lists the services currently on the network.&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = Servlist message
+| section     = 3.5.1
+| page        = 31
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;
+
+===SERVER===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;SERVER &lt;servername&gt; &lt;hopcount&gt; &lt;info&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+The server message is used to tell a server that the other end of a new connection is a server.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Server message
+| section     = 4.1.4
+| pages       = 16{{ndash}} 17
+| idanchor    = ietf
+}}&lt;/ref&gt; This message is also used to pass server data over whole net.
+&lt;hopcount&gt; details how many hops (server connections) away &lt;servername&gt; is.
+&lt;info&gt; contains addition human-readable information about the server.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===SQUERY===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;SQUERY &lt;servicename&gt; &lt;text&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+Identical to PRIVMSG except the recipient must be a service.&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = Squery
+| section     = 3.5.2
+| page        = 32
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;
+
+===SQUIT===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;SQUIT &lt;server&gt; &lt;comment&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+Causes &lt;server&gt; to quit the network.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Server quit message
+| section     = 4.1.7
+| pages       = 18{{ndash}} 19
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===STATS===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;STATS &lt;query&gt; [&lt;server&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Returns statistics about the current server, or &lt;server&gt; if it's specified.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Stats message
+| section     = 4.3.2
+| pages       = 27{{ndash}} 28
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===SUMMON===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;SUMMON &lt;user&gt; [&lt;server&gt;]&lt;/nowiki&gt;&lt;/code&gt; (&lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;)
+:&lt;code&gt;&lt;nowiki&gt;SUMMON &lt;user&gt; [&lt;server&gt; [&lt;channel&gt;]]&lt;/nowiki&gt;&lt;/code&gt; (&lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;)
+
+Gives users who are on the same host as &lt;server&gt; a message asking them to join IRC.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Summon message
+| section     = 5.4
+| page        = 40
+| idanchor    = ietf
+}}&lt;/ref&gt;&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = Summon message
+| section     = 4.5
+| page        = 40
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;; the optional &lt;channel&gt; parameter was added in &lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;
+
+===TIME===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;TIME [&lt;server&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Returns the local time on the current server, or &lt;server&gt; if specified.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Time message
+| section     = 4.3.4
+| page        = 29
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===TOPIC===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;TOPIC &lt;channel&gt; [&lt;topic&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Allows the client to query or set the channel topic on &lt;channel&gt;.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Topic message
+| section     = 4.2.4
+| pages       = 23{{ndash}} 24
+| idanchor    = ietf
+}}&lt;/ref&gt; If &lt;topic&gt; is given, it sets the channel topic to &lt;topic&gt;. If channel mode +t is set, only a channel operator may set the topic.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===TRACE===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;TRACE [&lt;target&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Trace a path across the IRC network to a specific server or client, in a similar method to [[traceroute]].&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Trace message
+| section     = 4.3.6
+| pages       = 30{{ndash}} 31
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===USER===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;USER &lt;username&gt; &lt;hostname&gt; &lt;servername&gt; &lt;realname&gt;&lt;/nowiki&gt;&lt;/code&gt; (&lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;)
+:&lt;code&gt;&lt;nowiki&gt;USER &lt;user&gt; &lt;mode&gt; &lt;unused&gt; &lt;realname&gt;&lt;/nowiki&gt;&lt;/code&gt; (&lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;)
+
+This command is used at the beginning of a connection to specify the username, hostname, real name and initial user modes of the connecting client.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = User message
+| section     = 4.1.3
+| pages       = 15{{ndash}} 16
+| idanchor    = ietf
+}}&lt;/ref&gt;&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = User message
+| section     = 3.1.3
+| page        = 11
+| idanchor    = ietf
+}}&lt;/ref&gt; &lt;realname&gt; may contain spaces, and thus must be prefixed with a colon.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;, modified in &lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;
+
+===USERHOST===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;USERHOST &lt;nickname&gt; [&lt;nickname&gt; &lt;nickname&gt; ...]&lt;/nowiki&gt;&lt;/code&gt;
+
+Returns a list of information about the nicknames specified.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Userhost message
+| section     = 5.7
+| page        = 42
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===USERS===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;USERS [&lt;server&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Returns a list of users and information about those users in a format similar to the [[UNIX]] commands [[who (Unix)|who]], rusers and [[finger (Unix)|finger]].&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Users
+| section     = 5.5
+| pages       = 40{{ndash}} 41
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===VERSION===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;VERSION [&lt;server&gt;]&lt;/nowiki&gt;&lt;/code&gt;
+
+Returns the [[software version|version]] of &lt;server&gt;, or the current server if omitted.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Version message
+| section     = 4.3.1
+| pages       = 26{{ndash}} 27
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===WALLOPS===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;WALLOPS &lt;message&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+Sends &lt;message&gt; to all operators connected to the server (&lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;), or all users with user mode 'w' set (&lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;).&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Operwall message
+| section     = 5.6
+| page        = 41
+| idanchor    = ietf
+}}&lt;/ref&gt;&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = Operwall message
+| section     = 4.7
+| pages       = 41{{ndash}} 42
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===WHO===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;WHO [&lt;name&gt; [&quot;o&quot;]]&lt;/nowiki&gt;&lt;/code&gt;
+
+Returns a list of users who match &lt;name&gt;.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Who query
+| section     = 4.5.1
+| pages       = 33{{ndash}} 34
+| idanchor    = ietf
+}}&lt;/ref&gt; If the flag &quot;o&quot; is given, the server will only return information about IRC Operators.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===WHOIS===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;WHOIS [&lt;server&gt;] &lt;nicknames&gt;&lt;/nowiki&gt;&lt;/code&gt;
+
+Returns information about the comma-separated list of nicknames masks &lt;nicknames&gt;.&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Whois query
+| section     = 4.5.2
+| pages       = 34{{ndash}} 35
+| idanchor    = ietf
+}}&lt;/ref&gt; If &lt;server&gt; is given, the command is forwarded to it for processing.
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+===WHOWAS===
+Syntax:
+:&lt;code&gt;&lt;nowiki&gt;WHOWAS &lt;nickname&gt; [&lt;count&gt; [&lt;server&gt;]]&lt;/nowiki&gt;&lt;/code&gt;
+
+Used to return information about a nickname that is no longer in use (due to client disconnection, or nickname changes).&lt;ref&gt;{{cite IETF
+| rfc         = 1459
+| sectionname = Whowas
+| section     = 4.5.3
+| page        = 35
+| idanchor    = ietf
+}}&lt;/ref&gt; If given, the server will return information from the last &lt;count&gt; times the nickname has been used. If &lt;server&gt; is given, the command is forwarded to it for processing. In &lt;nowiki&gt;RFC 2812&lt;/nowiki&gt;, &lt;nickname&gt; can be a comma-separated list of nicknames.&lt;ref&gt;{{cite IETF
+| rfc         = 2812
+| sectionname = Whowas
+| section     = 3.6.3
+| page        = 34
+| idanchor    = ietf
+}}&lt;/ref&gt;
+
+Defined in &lt;nowiki&gt;RFC 1459&lt;/nowiki&gt;
+
+==See also==
+* [[Internet Relay Chat]]
+* [[IRCd]]
+* [[IRCX]]
+* [[Server (computing)|Server]]
+
+==References==
+{{reflist|3}}
+
+==Bibliography==
+* {{cite IETF
+| title       = Internet Relay Chat Protocol
+| rfc         = 1459
+| last1       = Oikarinen
+| first1      = Jarkko
+| authorlink1 = Jarkko Oikarinen
+| last2       = Reed
+| first2      = Darren
+| year        = 1993
+| month       = May
+| publisher   = [[Internet Engineering Task Force|IETF]]
+| accessdate  = 2009-10-30
+| ref         = ietf
+}}
+* {{cite IETF
+| title       = Internet Relay Chat: Client Protocol
+| rfc         = 2812
+| last        = Kalt
+| first       = Christophe
+| year        = 2000
+| month       = April
+| publisher   = [[Internet Engineering Task Force|IETF]]
+| accessdate  = 2009-10-30
+| ref         = ietf
+}}
+
+==Further reading==
+* {{cite IETF
+| title       = A Discussion on Computer Network Conferencing
+| rfc         = 1324
+| last        = Reed
+| first       = Darren
+| year        = 1992
+| month       = May
+| publisher   = [[Internet Engineering Task Force|IETF]]
+| accessdate  = 2009-10-30
+}}
+* {{cite IETF
+| title       = Internet Relay Chat: Architecture
+| rfc         = 2810
+| last        = Kalt
+| first       = Christophe
+| year        = 2000
+| month       = April
+| publisher   = [[Internet Engineering Task Force|IETF]]
+| accessdate  = 2009-10-30
+}}
+* {{cite IETF
+| title       = Internet Relay Chat: Channel Management
+| rfc         = 2811
+| last        = Kalt
+| first       = Christophe
+| year        = 2000
+| month       = April
+| publisher   = [[Internet Engineering Task Force|IETF]]
+| accessdate  = 2009-10-30
+}}
+* {{cite IETF
+| title       = Internet Relay Chat: Server Protocol
+| rfc         = 2813
+| last        = Kalt
+| first       = Christophe
+| year        = 2000
+| month       = April
+| publisher   = [[Internet Engineering Task Force|IETF]]
+| accessdate  = 2009-10-30
+}}
+
+==External links==
+*[http://www.technerd.net/irc-commands.html Complete list of IRC commands]
+
+{{IRC topics}}
+
+[[Category:Internet Relay Chat]]
+
+[[af:Lys van IRC-bevele]]
+[[nl:Lijst van IRC-commando's]]
+[[ru:Список IRC-команд]]
+[[simple:List of Internet Relay Chat commands]]
+[[tr:IRC komutları listesi]]</text>
+    </revision>
+  </page>
+</mediawiki>
