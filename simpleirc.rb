@@ -59,6 +59,7 @@ class Command
     end
 end
 Command.parse_all
+port = 2000
 Mark = "!"
 Readline.completion_append_character = " "
 Readline.completion_proc = proc { |s| s.start_with?(Mark) ? \
@@ -72,9 +73,16 @@ end
 puts Command.help_summary
 TCPSocket.open(ARGV[0], ARGV[1]) do |s|
     Thread.new do
-        while line = s.gets 
-            puts line 
-            s.puts "PONG uranus" if line.start_with?("PING ")
+        TCPServer.open port do |server|
+            loop do
+                client = server.accept
+                client.puts "welcome"
+                while line = s.gets 
+                    client.puts line
+                    s.puts "PONG uranus" if line.start_with?("PING ")
+                end
+                client.close
+            end
         end
     end
     while line = Readline.readline('', true)

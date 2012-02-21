@@ -1,3 +1,4 @@
 * Usage: hostname port
+* «telnet localhost 2000» for the display part
 * commands.wikipedia extracted from:
     https://en.wikipedia.org/wiki/List_of_Internet_Relay_Chat_commands
