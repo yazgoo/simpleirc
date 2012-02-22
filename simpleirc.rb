@@ -21,9 +21,9 @@ class Command
         Net::HTTP.start("en.wikipedia.org") do |http|
             resp = http.get("/wiki/Special:Export/List_of_Internet_Relay_Chat_commands",
                             {
-                             'Referer' => 'http://gitorious.org/simpleirc',
-                             'User-Agent' => 'simpleirc'
-                            })
+                'Referer' => 'http://gitorious.org/simpleirc',
+                'User-Agent' => 'simpleirc'
+            })
             open(CACHE_PATH, "wb") do |file|
                 file.write(resp.body)
             end
@@ -75,9 +75,6 @@ eos
         if name.chomp.empty? then help_summary
         else @commands.has_key?(name) ? @commands[name] : name + ": not found"
         end
-    end
-    def tohtml str
-        str.gsub("&lt;", "<").gsub "&gt;", ">"
     end
     def initialize line
         line.chomp!.sub! /:&lt;code&gt;&lt;nowiki&gt;(.*)&lt;\/nowiki&gt;&lt;\/code&gt;/, '\1'
